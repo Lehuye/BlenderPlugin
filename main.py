@@ -1,20 +1,24 @@
 import bpy
-from .ui_panel import MaterialPanel
-from .material_clear import MATERIAL_OT_clear_all
-from .origin_tools import (
-    ORIGIN_OT_to_geometry,
-    ORIGIN_OT_to_mass,
-    ORIGIN_OT_to_cursor,
-    ORIGIN_OT_to_volume
-)
-
-classes = [
+from .ui_panel import MaterialPanel,TextPanel,OriginPanel
+from .ultrs import (
     MATERIAL_OT_clear_all,
     ORIGIN_OT_to_geometry,
     ORIGIN_OT_to_mass,
     ORIGIN_OT_to_cursor,
     ORIGIN_OT_to_volume,
-    MaterialPanel
+    OBJECT_OT_rename_batch,
+)
+
+classes = [
+    MaterialPanel,
+    MATERIAL_OT_clear_all,
+    OriginPanel,
+    ORIGIN_OT_to_geometry,
+    ORIGIN_OT_to_mass,
+    ORIGIN_OT_to_cursor,
+    ORIGIN_OT_to_volume,
+    TextPanel,
+    OBJECT_OT_rename_batch
 ]
 
 def register():

@@ -1,0 +1,8 @@
+from .material_tools import MATERIAL_OT_clear_all
+from .origin_tools import (
+    ORIGIN_OT_to_geometry,
+    ORIGIN_OT_to_mass,
+    ORIGIN_OT_to_cursor,
+    ORIGIN_OT_to_volume,
+)
+from .text_tools import OBJECT_OT_rename_batch

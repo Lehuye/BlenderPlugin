@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Lehuye Plugin",
-    "author": "GitHub Copilot",
-    "version": (1, 0),
+    "author": "Lehuye Inc.",
+    "version": (1, 1, 0),
     "blender": (2, 80, 0),
     "location": "View3D > Sidebar > Lehuye",
     "description": "乐乎也多功能插件集",
