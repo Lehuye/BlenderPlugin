@@ -1,5 +1,5 @@
 import bpy
-from .ui_panel import MaterialPanel,TextPanel,OriginPanel
+from .ui_panel import MaterialPanel,TextPanel,OriginPanel,DXFGeneratorPanel
 from .ultrs import (
     MATERIAL_OT_clear_all,
     ORIGIN_OT_to_geometry,
@@ -7,6 +7,7 @@ from .ultrs import (
     ORIGIN_OT_to_cursor,
     ORIGIN_OT_to_volume,
     OBJECT_OT_rename_batch,
+    OBJECT_OT_generate_from_dxf
 )
 
 classes = [
@@ -18,7 +19,9 @@ classes = [
     ORIGIN_OT_to_cursor,
     ORIGIN_OT_to_volume,
     TextPanel,
-    OBJECT_OT_rename_batch
+    OBJECT_OT_rename_batch,
+    DXFGeneratorPanel,
+    OBJECT_OT_generate_from_dxf,
 ]
 
 def register():

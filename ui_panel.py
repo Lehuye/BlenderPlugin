@@ -69,5 +69,23 @@ class TextPanel(bpy.types.Panel):
         layout.prop(scene, "rename_order", text="顺序")     # Enum: ASC / DESC
         layout.operator("object.rename_selected", text="执行批量重命名")
         layout.separator()
+
+class DXFGeneratorPanel(bpy.types.Panel):
+    bl_label = "DXF 生成 3D"
+    bl_idname = "VIEW3D_PT_generate_from_dxf"
+    bl_space_type = 'VIEW_3D'
+    bl_region_type = 'UI'
+    bl_category = 'Lehuye'
+
+    def draw(self, context):
+        layout = self.layout
+        scene = context.scene
+
+        layout.label(text="上传 DXF 并生成 3D")
+        layout.prop(scene, "dxf_filepath", text="选择文件")
+        layout.prop(scene, "level_height", text="楼层高度 (m)")
+        layout.prop(scene, "wall_thickness", text="墙体厚度 (m)")
+        layout.operator("object.generate_from_dxf", text="生成 3D 墙体")
+
 def unregister_panel_props():
     del bpy.types.Scene.lehuye_tab

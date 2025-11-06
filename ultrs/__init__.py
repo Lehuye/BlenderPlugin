@@ -6,3 +6,5 @@ from .origin_tools import (
     ORIGIN_OT_to_volume,
 )
 from .text_tools import OBJECT_OT_rename_batch
+
+from .generatefromdxf_tools import OBJECT_OT_generate_from_dxf

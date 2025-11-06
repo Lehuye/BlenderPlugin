@@ -12,3 +12,6 @@ zip -r lehuyeplugin.zip .
 
 # 文件结构
 
+# 需要安装 Import curve dxf plugin
+
+![](./screenshot/01.png)
