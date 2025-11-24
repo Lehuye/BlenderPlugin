@@ -15,3 +15,12 @@ zip -r lehuyeplugin.zip .
 # 需要安装 Import curve dxf plugin
 
 ![](./screenshot/01.png)
+
+
+# ultrs 文件夹 
+
+函数统一放在 这个是处理的根本逻辑，每个功能独立为一个py文件，需要将其引入_init_.py文件
+
+# ui_panel.py 主要是用来
+
+创建UI面板，需要在 main.py 文件中引入对应的功能 再从 ui_panel.py 去构建界面

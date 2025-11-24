@@ -1,4 +1,6 @@
 from .material_tools import MATERIAL_OT_clear_all
+
+
 from .origin_tools import (
     ORIGIN_OT_to_geometry,
     ORIGIN_OT_to_mass,
@@ -8,3 +10,5 @@ from .origin_tools import (
 from .text_tools import OBJECT_OT_rename_batch
 
 from .generatefromdxf_tools import OBJECT_OT_generate_from_dxf
+
+from .generate_maze_tools import MESH_OT_generate_maze_grid

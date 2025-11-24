@@ -70,6 +70,31 @@ class TextPanel(bpy.types.Panel):
         layout.operator("object.rename_selected", text="执行批量重命名")
         layout.separator()
 
+# 快速生成四壁面板
+class GenerateMazePanel(bpy.types.Panel):
+    bl_label = "快速生成迷宫"
+    bl_idname = "MESH_PT_generate_maze_panel"
+    bl_space_type = 'VIEW_3D'
+    bl_region_type = 'UI'
+    bl_category = 'Lehuye'
+
+    def draw(self, context):
+        layout = self.layout
+        scene = context.scene
+
+        layout.label(text="多边形迷宫参数（仅墙体）")
+        # 新增：单元格边数控件
+        layout.prop(scene, "edge_count", text="单元格边数")
+        # 原有参数控件（名称与ultrs.py一致）
+        layout.prop(scene, "cell_length", text="单元格边长 (m)")
+        layout.prop(scene, "wall_thickness", text="墙体厚度 (m)")
+        layout.prop(scene, "wall_height", text="墙体高度 (m)")
+        layout.prop(scene, "row_count", text="行数")
+        layout.prop(scene, "col_count", text="列数")
+        # 调用运算符（ID与ultrs.py一致）
+        layout.operator("mesh.generate_maze_grid", text="生成迷宫")
+
+# 通过DXF文件生成3D
 class DXFGeneratorPanel(bpy.types.Panel):
     bl_label = "DXF 生成 3D"
     bl_idname = "VIEW3D_PT_generate_from_dxf"
