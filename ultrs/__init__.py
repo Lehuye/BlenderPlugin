@@ -12,3 +12,5 @@ from .text_tools import OBJECT_OT_rename_batch
 from .generatefromdxf_tools import OBJECT_OT_generate_from_dxf
 
 from .generate_maze_tools import MESH_OT_generate_maze_grid
+
+from .fix_model_tools import OBJECT_OT_fix_model

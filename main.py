@@ -1,7 +1,7 @@
 import bpy
 
 #从ui_pennel引入面板类
-from .ui_panel import MaterialPanel,TextPanel,OriginPanel,DXFGeneratorPanel, GenerateMazePanel
+from .ui_panel import MaterialPanel,TextPanel,OriginPanel,DXFGeneratorPanel, GenerateMazePanel,FixModelPanel
 
 # 引入的类名
 from .ultrs import (
@@ -12,7 +12,8 @@ from .ultrs import (
     ORIGIN_OT_to_volume,
     OBJECT_OT_rename_batch,
     OBJECT_OT_generate_from_dxf, # DXF 快速生成 3D
-    MESH_OT_generate_maze_grid #* 快速生成四壁 */
+    MESH_OT_generate_maze_grid, #* 快速生成四壁 */
+    OBJECT_OT_fix_model,
 )
 
 classes = [
@@ -38,6 +39,10 @@ classes = [
     # DXF 生成面板和操作类
     DXFGeneratorPanel,
     OBJECT_OT_generate_from_dxf,
+
+    # 修复模型
+    FixModelPanel,
+    OBJECT_OT_fix_model,
 
 ]
 

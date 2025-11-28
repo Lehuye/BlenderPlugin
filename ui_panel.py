@@ -23,7 +23,7 @@ class MaterialPanel(bpy.types.Panel):
         layout = self.layout
         layout.operator("material.clear_all", text="移除所有材质")
 
-
+# 面板类：在侧栏显示轴心工具
 class OriginPanel(bpy.types.Panel):
     bl_label = "轴心工具"
     bl_idname = "VIEW3D_PT_origin_tools"
@@ -38,6 +38,18 @@ class OriginPanel(bpy.types.Panel):
         layout.operator("origin.to_cursor", text="原点（3D光标）")
         layout.operator("origin.to_volume", text="体积中心")
 
+
+# 整理模型
+class FixModelPanel(bpy.types.Panel):
+    bl_label = "修复模型"
+    bl_idname = "VIEW3D_PT_fix_tools"
+    bl_space_type = 'VIEW_3D'
+    bl_region_type = 'UI'
+    bl_category = 'Lehuye'
+
+    def draw(self, context):
+        layout = self.layout
+        layout.operator("object.fix_model", text="修复模型")
 
 # 面板类：在侧栏显示文本输入框和按钮
 class TextPanel(bpy.types.Panel):
