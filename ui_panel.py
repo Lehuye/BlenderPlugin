@@ -38,6 +38,17 @@ class OriginPanel(bpy.types.Panel):
         layout.operator("origin.to_cursor", text="原点（3D光标）")
         layout.operator("origin.to_volume", text="体积中心")
 
+# 创建多边形
+class CreatePolygonPanel(bpy.types.Panel):
+    bl_label = "创建多边形"
+    bl_idname = "Create_Polygon_tools"
+    bl_space_type = 'VIEW_3D'
+    bl_region_type =  'UI'
+    bl_category = 'Lehuye'
+
+    def draw(self, context):
+        layout = self.layout
+        layout.operator("object.create_polygon", text="创建等边三角体")
 
 # 整理模型
 class FixModelPanel(bpy.types.Panel):
