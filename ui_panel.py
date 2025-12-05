@@ -50,6 +50,8 @@ class VIEW3D_PT_stairs_panel(bpy.types.Panel):
         layout = self.layout
         layout.label(text="Generate a staircase")
         layout.operator("object.generate_stairs")
+        layout.label(text="Generate a staircase by Panel")
+        layout.operator("object.generate_stair_plane")
 
 # 创建多边形
 class CreatePolygonPanel(bpy.types.Panel):

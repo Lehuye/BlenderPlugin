@@ -16,6 +16,7 @@ from .ultrs import (
     OBJECT_OT_fix_model,
     OBJECT_OT_create_polygon,
     OBJECT_OT_generate_stairs,
+    OBJECT_OT_generate_stair_plane,
 
 )
 
@@ -53,6 +54,7 @@ classes = [
 
     VIEW3D_PT_stairs_panel,
     OBJECT_OT_generate_stairs,
+    OBJECT_OT_generate_stair_plane
 
     
 

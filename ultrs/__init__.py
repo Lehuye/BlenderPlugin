@@ -17,4 +17,4 @@ from .fix_model_tools import OBJECT_OT_fix_model
 
 from .create_polygon_tools import OBJECT_OT_create_polygon
 
-from .generate_stairs_tools import OBJECT_OT_generate_stairs
+from .generate_stairs_tools import OBJECT_OT_generate_stairs,OBJECT_OT_generate_stair_plane
