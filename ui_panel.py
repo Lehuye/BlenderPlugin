@@ -38,6 +38,19 @@ class OriginPanel(bpy.types.Panel):
         layout.operator("origin.to_cursor", text="原点（3D光标）")
         layout.operator("origin.to_volume", text="体积中心")
 
+# 生成楼梯面板
+class VIEW3D_PT_stairs_panel(bpy.types.Panel):
+    bl_label = "Stair Generator"
+    bl_idname = "VIEW3D_PT_stairs_panel"
+    bl_space_type = 'VIEW_3D'
+    bl_region_type = 'UI'
+    bl_category = 'Lehuye'
+
+    def draw(self, context):
+        layout = self.layout
+        layout.label(text="Generate a staircase")
+        layout.operator("object.generate_stairs")
+
 # 创建多边形
 class CreatePolygonPanel(bpy.types.Panel):
     bl_label = "创建多边形"

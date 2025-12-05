@@ -1,7 +1,7 @@
 import bpy
 
 #从ui_pennel引入面板类
-from .ui_panel import MaterialPanel,TextPanel,OriginPanel,DXFGeneratorPanel, GenerateMazePanel,FixModelPanel,CreatePolygonPanel
+from .ui_panel import MaterialPanel,TextPanel,OriginPanel,DXFGeneratorPanel, GenerateMazePanel,FixModelPanel,CreatePolygonPanel,VIEW3D_PT_stairs_panel
 
 # 引入的类名
 from .ultrs import (
@@ -15,6 +15,7 @@ from .ultrs import (
     MESH_OT_generate_maze_grid, #* 快速生成四壁 */
     OBJECT_OT_fix_model,
     OBJECT_OT_create_polygon,
+    OBJECT_OT_generate_stairs,
 
 )
 
@@ -49,6 +50,10 @@ classes = [
     # 创建多边形
     CreatePolygonPanel,
     OBJECT_OT_create_polygon,
+
+    VIEW3D_PT_stairs_panel,
+    OBJECT_OT_generate_stairs,
+
     
 
 ]
